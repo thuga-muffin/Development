@@ -1,0 +1,96 @@
+
+
+[class*="row"]	{
+	background: #eee;
+	margin-bottom: 10px;
+}
+
+header [class*="col"],
+nav [class*="col"]	{
+	background: #fff;
+}
+
+/*	Search box	*/
+
+header input[type = search]	{
+	width: 70%;
+
+	margin-top: 20px;
+
+	float: left;
+}
+
+header a	{
+	margin: 20px 0 20px;
+
+	float: right;
+}
+
+.hero-unit	{
+
+}
+
+	.hero-unit ul	{
+		padding: 0;
+	}
+
+		.hero-unit li	{
+			list-style: none;
+		}
+
+			.hero-unit img	{
+				width: 100%;
+			}
+
+
+
+
+@media (max-width: 480px)	{
+	main	{
+		background-color: #f1ea81
+	}
+
+	main:after	{
+		content: "Max-width 480px landscape phone and down";
+	}
+}
+
+@media (min-width: 481px) and (max-width: 767px)	{
+	main	{
+		background: #a7f7e5;
+	}
+
+	main:after	{
+		content: "Min-width 481px and max-width 767px landscape phone to portrait tablet";
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px)	{
+	main	{
+		background: #c4deff;
+	}
+
+	main:after	{
+		content: "Min-width 768px and max-width 979px, portrait tablet to landscape";
+	}
+}
+
+@media (min-width: 980px) and (max-width: 1199px)	{
+	main	{
+		background: #fde3ff;
+	}
+
+	main:after	{
+		content: "Min-width 980px, max-width 1199px, desktop format";
+	}
+}
+
+@media (min-width: 1200px)	{
+	main	{
+		background: #ffc4c4;
+	}
+
+	main:after	{
+		content: "Min-width 1200px, widescreen format";
+	}
+}
