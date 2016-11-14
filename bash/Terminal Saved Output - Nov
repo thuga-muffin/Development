@@ -1,0 +1,383 @@
+Last login: Mon Oct 24 03:48:50 on ttys001
+Erics-iMac:~ saga$ cd projects
+Erics-iMac:projects saga$ cd BandDConstruction/
+Erics-iMac:BandDConstruction saga$ vagrant ssh
+Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.13.0-55-generic x86_64)
+
+
+ $$$$$$\   $$$$$$\   $$$$$$\ $$$$$$$$\  $$$$$$\  $$\   $$\
+$$  __$$\ $$  __$$\ $$  __$$\\__$$  __|$$  __$$\ $$ |  $$ |
+$$ /  \__|$$ /  \__|$$ /  $$ |  $$ |   $$ /  \__|$$ |  $$ |
+\$$$$$$\  $$ |      $$ |  $$ |  $$ |   $$ |      $$$$$$$$ |
+ \____$$\ $$ |      $$ |  $$ |  $$ |   $$ |      $$  __$$ |
+$$\   $$ |$$ |  $$\ $$ |  $$ |  $$ |   $$ |  $$\ $$ |  $$ |
+\$$$$$$  |\$$$$$$  | $$$$$$  |  $$ |   \$$$$$$  |$$ |  $$ |
+ \______/  \______/  \______/   \__|    \______/ \__|  \__|
+
+$$$$$$$\   $$$$$$\  $$\   $$\
+$$  __$$\ $$  __$$\ $$ |  $$ |
+$$ |  $$ |$$ /  $$ |\$$\ $$  |
+$$$$$$$\ |$$ |  $$ | \$$$$  /
+$$  __$$\ $$ |  $$ | $$  $$<
+$$ |  $$ |$$ |  $$ |$$  /\$$\
+$$$$$$$  | $$$$$$  |$$ /  $$ |
+\_______/  \______/ \__|  \__|
+
+For help, please visit box.scotch.io or scotch.io. Follow us on Twitter at @scotch_io and at @nickforthought.
+
+
+Last login: Sat Oct 22 01:52:56 2016 from 10.0.2.2
+vagrant@scotchbox:~$ mysql -uroot -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 40
+Server version: 5.5.46-0ubuntu0.14.04.2 (Ubuntu)
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE wordpress
+    -> CREATE DATABASE wordpress
+    -> 
+    -> ^CCtrl-C -- exit!
+Aborted
+vagrant@scotchbox:~$ ls
+redis-stable  redis-stable.tar.gz  tmp
+vagrant@scotchbox:~$ mysql -uroot -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 43
+Server version: 5.5.46-0ubuntu0.14.04.2 (Ubuntu)
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> ^CCtrl-C -- exit!
+Aborted
+vagrant@scotchbox:~$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 52
+Server version: 5.5.46-0ubuntu0.14.04.2 (Ubuntu)
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASE
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATABASE' at line 1
+mysql> SHOW DATABASES
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| scotchbox          |
+| wordpress          |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> SHOW DATABASES
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| scotchbox          |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> CREATE DATABASE wordpress
+    -> ;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW DATABASES
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| scotchbox          |
+| wordpress          |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> 
+  [Restored]
+Last login: Tue Oct 25 20:32:30 on console
+Erics-iMac:BandDConstruction saga$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'scotch/box' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Remote connection disconnect. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 4.3.28
+    default: VirtualBox Version: 5.1
+==> default: Setting hostname...
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /var/www => /Users/saga/projects/BandDConstruction
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+Erics-iMac:BandDConstruction saga$ vagrant ssh
+Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.13.0-55-generic x86_64)
+
+
+ $$$$$$\   $$$$$$\   $$$$$$\ $$$$$$$$\  $$$$$$\  $$\   $$\
+$$  __$$\ $$  __$$\ $$  __$$\\__$$  __|$$  __$$\ $$ |  $$ |
+$$ /  \__|$$ /  \__|$$ /  $$ |  $$ |   $$ /  \__|$$ |  $$ |
+\$$$$$$\  $$ |      $$ |  $$ |  $$ |   $$ |      $$$$$$$$ |
+ \____$$\ $$ |      $$ |  $$ |  $$ |   $$ |      $$  __$$ |
+$$\   $$ |$$ |  $$\ $$ |  $$ |  $$ |   $$ |  $$\ $$ |  $$ |
+\$$$$$$  |\$$$$$$  | $$$$$$  |  $$ |   \$$$$$$  |$$ |  $$ |
+ \______/  \______/  \______/   \__|    \______/ \__|  \__|
+
+$$$$$$$\   $$$$$$\  $$\   $$\
+$$  __$$\ $$  __$$\ $$ |  $$ |
+$$ |  $$ |$$ /  $$ |\$$\ $$  |
+$$$$$$$\ |$$ |  $$ | \$$$$  /
+$$  __$$\ $$ |  $$ | $$  $$<
+$$ |  $$ |$$ |  $$ |$$  /\$$\
+$$$$$$$  | $$$$$$  |$$ /  $$ |
+\_______/  \______/ \__|  \__|
+
+For help, please visit box.scotch.io or scotch.io. Follow us on Twitter at @scotch_io and at @nickforthought.
+
+
+Last login: Mon Oct 24 09:35:29 2016 from 10.0.2.2
+vagrant@scotchbox:~$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 233
+Server version: 5.5.46-0ubuntu0.14.04.2 (Ubuntu)
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> \h
+
+For information about MySQL products and services, visit:
+   http://www.mysql.com/
+For developer information, including the MySQL Reference Manual, visit:
+   http://dev.mysql.com/
+To buy MySQL Enterprise support, training, or other products, visit:
+   https://shop.mysql.com/
+
+List of all MySQL commands:
+Note that all text commands must be first on line and end with ';'
+?         (\?) Synonym for `help'.
+clear     (\c) Clear the current input statement.
+connect   (\r) Reconnect to the server. Optional arguments are db and host.
+delimiter (\d) Set statement delimiter.
+edit      (\e) Edit command with $EDITOR.
+ego       (\G) Send command to mysql server, display result vertically.
+exit      (\q) Exit mysql. Same as quit.
+go        (\g) Send command to mysql server.
+help      (\h) Display this help.
+nopager   (\n) Disable pager, print to stdout.
+notee     (\t) Don't write into outfile.
+pager     (\P) Set PAGER [to_pager]. Print the query results via PAGER.
+print     (\p) Print current command.
+prompt    (\R) Change your mysql prompt.
+quit      (\q) Quit mysql.
+rehash    (\#) Rebuild completion hash.
+source    (\.) Execute an SQL script file. Takes a file name as an argument.
+status    (\s) Get status information from the server.
+system    (\!) Execute a system shell command.
+tee       (\T) Set outfile [to_outfile]. Append everything into given outfile.
+use       (\u) Use another database. Takes database name as argument.
+charset   (\C) Switch to another charset. Might be needed for processing binlog with multi-byte charsets.
+warnings  (\W) Show warnings after every statement.
+nowarning (\w) Don't show warnings after every statement.
+
+For server side help, type 'help contents'
+
+mysql> show tables;
+ERROR 1046 (3D000): No database selected
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| scotchbox          |
+| wordpress          |
++--------------------+
+5 rows in set (0.02 sec)
+
+mysql> wordpress show tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'wordpress show tables' at line 1
+mysql> show tables wordpress;
+ERROR 1046 (3D000): No database selected
+mysql> use wordpress
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-----------------------+
+| Tables_in_wordpress   |
++-----------------------+
+| wp_commentmeta        |
+| wp_comments           |
+| wp_links              |
+| wp_options            |
+| wp_postmeta           |
+| wp_posts              |
+| wp_term_relationships |
+| wp_term_taxonomy      |
+| wp_termmeta           |
+| wp_terms              |
+| wp_usermeta           |
+| wp_users              |
++-----------------------+
+12 rows in set (0.00 sec)
+
+mysql> describe wp-links;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-links' at line 1
+mysql> DESCRIBE wp-links;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-links' at line 1
+mysql> describe wp_links;
++------------------+---------------------+------+-----+---------------------+----------------+
+| Field            | Type                | Null | Key | Default             | Extra          |
++------------------+---------------------+------+-----+---------------------+----------------+
+| link_id          | bigint(20) unsigned | NO   | PRI | NULL                | auto_increment |
+| link_url         | varchar(255)        | NO   |     |                     |                |
+| link_name        | varchar(255)        | NO   |     |                     |                |
+| link_image       | varchar(255)        | NO   |     |                     |                |
+| link_target      | varchar(25)         | NO   |     |                     |                |
+| link_description | varchar(255)        | NO   |     |                     |                |
+| link_visible     | varchar(20)         | NO   | MUL | Y                   |                |
+| link_owner       | bigint(20) unsigned | NO   |     | 1                   |                |
+| link_rating      | int(11)             | NO   |     | 0                   |                |
+| link_updated     | datetime            | NO   |     | 0000-00-00 00:00:00 |                |
+| link_rel         | varchar(255)        | NO   |     |                     |                |
+| link_notes       | mediumtext          | NO   |     | NULL                |                |
+| link_rss         | varchar(255)        | NO   |     |                     |                |
++------------------+---------------------+------+-----+---------------------+----------------+
+13 rows in set (0.00 sec)
+
+mysql> select * from wp_links;
+Empty set (0.00 sec)
+
+mysql> create database BANDDsaga_DB;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| BANDDsaga_DB       |
+| mysql              |
+| performance_schema |
+| scotchbox          |
+| wordpress          |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use BANDDsaga_DB
+Database changed
+mysql> create user 'BANDDsaga_DB' @'localhost' identified by 'XZ;9)f.UV3*r';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> grant all privileges on *.* to 'BANDDsaga_DB'@'localhost'
+    -> with grant option;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> use database worpress
+ERROR 1049 (42000): Unknown database 'database'
+mysql> use wordpress
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-----------------------+
+| Tables_in_wordpress   |
++-----------------------+
+| wp_commentmeta        |
+| wp_comments           |
+| wp_links              |
+| wp_options            |
+| wp_postmeta           |
+| wp_posts              |
+| wp_term_relationships |
+| wp_term_taxonomy      |
+| wp_termmeta           |
+| wp_terms              |
+| wp_usermeta           |
+| wp_users              |
++-----------------------+
+12 rows in set (0.00 sec)
+
+mysql> select *.* from wp_users
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.* from wp_users' at line 1
+mysql> select * from wp_users
+    -> ;
++----+------------+------------------------------------+---------------+-------------------+----------+---------------------+---------------------+-------------+--------------+
+| ID | user_login | user_pass                          | user_nicename | user_email        | user_url | user_registered     | user_activation_key | user_status | display_name |
++----+------------+------------------------------------+---------------+-------------------+----------+---------------------+---------------------+-------------+--------------+
+|  1 | admin      | $P$BR52mJbMoJ0pgcq4DNYqYx0EiZkj3G0 | admin         | luba@sagamktg.com |          | 2016-10-24 10:31:25 |                     |           0 | admin        |
++----+------------+------------------------------------+---------------+-------------------+----------+---------------------+---------------------+-------------+--------------+
+1 row in set (0.00 sec)
+
+mysql> exit
+Bye
+vagrant@scotchbox:~$ exit
+logout
+Connection to 127.0.0.1 closed.
+Erics-iMac:BandDConstruction saga$ vagrant halt
+==> default: Attempting graceful shutdown of VM...
+Erics-iMac:BandDConstruction saga$ 
+  [Restored]
+Last login: Fri Nov 11 21:21:07 on console
+Erics-iMac:BandDConstruction saga$ 

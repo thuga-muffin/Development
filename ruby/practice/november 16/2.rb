@@ -9,4 +9,4 @@ end
 #######################################
 
 
-"P".upto("L") { |n| puts letter, " " }
+"P".upto("L") { |letter| puts letter, " " }
