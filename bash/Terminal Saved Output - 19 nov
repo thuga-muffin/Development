@@ -1,0 +1,697 @@
+Last login: Mon Nov 14 08:49:16 on console
+Erics-iMac:~ saga$ npm install -g grunt-cli
+npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules
+/usr/local/lib
+└─┬ grunt-cli@1.2.0 
+  ├─┬ findup-sync@0.3.0 
+  │ └─┬ glob@5.0.15 
+  │   ├─┬ inflight@1.0.6 
+  │   │ └── wrappy@1.0.2 
+  │   ├── inherits@2.0.3 
+  │   ├─┬ minimatch@3.0.3 
+  │   │ └─┬ brace-expansion@1.1.6 
+  │   │   ├── balanced-match@0.4.2 
+  │   │   └── concat-map@0.0.1 
+  │   ├── once@1.4.0 
+  │   └── path-is-absolute@1.0.1 
+  ├── grunt-known-options@1.1.0 
+  ├─┬ nopt@3.0.6 
+  │ └── abbrev@1.0.9 
+  └── resolve@1.1.7 
+
+npm ERR! Darwin 14.4.0
+npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "grunt-cli"
+npm ERR! node v6.9.1
+npm ERR! npm  v3.10.8
+npm ERR! path /usr/local/lib/node_modules
+npm ERR! code EACCES
+npm ERR! errno -13
+npm ERR! syscall access
+
+npm ERR! Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+npm ERR!     at Error (native)
+npm ERR!  { Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+npm ERR!     at Error (native)
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'access',
+npm ERR!   path: '/usr/local/lib/node_modules' }
+npm ERR! 
+npm ERR! Please try running this command again as root/Administrator.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /Users/saga/npm-debug.log
+Erics-iMac:~ saga$ sudo npm install -g grunt-cli
+Password:
+/usr/local/bin/grunt -> /usr/local/lib/node_modules/grunt-cli/bin/grunt
+/usr/local/lib
+└─┬ grunt-cli@1.2.0 
+  ├─┬ findup-sync@0.3.0 
+  │ └─┬ glob@5.0.15 
+  │   ├─┬ inflight@1.0.6 
+  │   │ └── wrappy@1.0.2 
+  │   ├── inherits@2.0.3 
+  │   ├─┬ minimatch@3.0.3 
+  │   │ └─┬ brace-expansion@1.1.6 
+  │   │   ├── balanced-match@0.4.2 
+  │   │   └── concat-map@0.0.1 
+  │   ├── once@1.4.0 
+  │   └── path-is-absolute@1.0.1 
+  ├── grunt-known-options@1.1.0 
+  ├─┬ nopt@3.0.6 
+  │ └── abbrev@1.0.9 
+  └── resolve@1.1.7 
+
+Erics-iMac:~ saga$ cd projects/
+Erics-iMac:projects saga$ ls
+BandDConstruction	Development		TheTen			gradientmaps		server stuff
+DMC WP			RGA			TrainingLab		holder			sublime - workspace
+DMCStrategies		Testing			Vagrant			incase
+DetroitDelivers		Testy			Vagrantfile		saffellart
+Erics-iMac:projects saga$ cd saffellart/
+Erics-iMac:saffellart saga$ npm install bootstrap
+/Users/saga/projects/saffellart
+└── bootstrap@3.3.7 
+
+npm WARN enoent ENOENT: no such file or directory, open '/Users/saga/projects/saffellart/package.json'
+npm WARN saffellart No description
+npm WARN saffellart No repository field.
+npm WARN saffellart No README data
+npm WARN saffellart No license field.
+Erics-iMac:saffellart saga$ ls
+css		fonts		index.html	js		node_modules
+Erics-iMac:saffellart saga$ cd node_modules/
+Erics-iMac:node_modules saga$ ls
+bootstrap
+Erics-iMac:node_modules saga$ cd bootstrap/
+Erics-iMac:bootstrap saga$ npm install
+npm WARN deprecated tough-cookie@2.2.2: ReDoS vulnerability parsing Set-Cookie https://nodesecurity.io/advisories/130
+npm WARN deprecated minimatch@0.2.12: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN prefer global coffee-script@1.10.0 should be installed with -g
+npm WARN prefer global jsonlint@1.6.2 should be installed with -g
+npm WARN prefer global jshint@2.9.4 should be installed with -g
+
+> phantomjs@1.9.20 install /Users/saga/projects/saffellart/node_modules/bootstrap/node_modules/phantomjs
+> node install.js
+
+PhantomJS not found on PATH
+Downloading https://github.com/Medium/phantomjs/releases/download/v1.9.19/phantomjs-1.9.8-macosx.zip
+Saving to /var/folders/8j/811mrvxd4854hmym05ll48ch0000gp/T/phantomjs/phantomjs-1.9.8-macosx.zip
+Receiving...
+  [================================--------] 81%
+Received 9187K total.
+Extracting zip contents
+Removing /Users/saga/projects/saffellart/node_modules/bootstrap/node_modules/phantomjs/lib/phantom
+Copying extracted folder /var/folders/8j/811mrvxd4854hmym05ll48ch0000gp/T/phantomjs/phantomjs-1.9.8-macosx.zip-extract-1479136199890/phantomjs-1.9.8-macosx -> /Users/saga/projects/saffellart/node_modules/bootstrap/node_modules/phantomjs/lib/phantom
+Writing location.js file
+Done. Phantomjs binary available at /Users/saga/projects/saffellart/node_modules/bootstrap/node_modules/phantomjs/lib/phantom/bin/phantomjs
+bootstrap@3.3.7 /Users/saga/projects/saffellart/node_modules/bootstrap
+├── btoa@1.1.2 
+├─┬ glob@7.0.6 
+│ ├── fs.realpath@1.0.0 
+│ ├─┬ inflight@1.0.6 
+│ │ └── wrappy@1.0.2 
+│ ├── inherits@2.0.3 
+│ ├─┬ minimatch@3.0.3 
+│ │ └─┬ brace-expansion@1.1.6 
+│ │   ├── balanced-match@0.4.2 
+│ │   └── concat-map@0.0.1 
+│ ├── once@1.4.0 
+│ └── path-is-absolute@1.0.1 
+├─┬ grunt@1.0.1 
+│ ├── coffee-script@1.10.0 
+│ ├─┬ dateformat@1.0.12 
+│ │ ├── get-stdin@4.0.1 
+│ │ └─┬ meow@3.7.0 
+│ │   ├─┬ camelcase-keys@2.1.0 
+│ │   │ └── camelcase@2.1.1 
+│ │   ├── decamelize@1.2.0 
+│ │   ├─┬ loud-rejection@1.6.0 
+│ │   │ ├─┬ currently-unhandled@0.4.1 
+│ │   │ │ └── array-find-index@1.0.2 
+│ │   │ └── signal-exit@3.0.1 
+│ │   ├── map-obj@1.0.1 
+│ │   ├─┬ normalize-package-data@2.3.5 
+│ │   │ ├── hosted-git-info@2.1.5 
+│ │   │ ├─┬ is-builtin-module@1.0.0 
+│ │   │ │ └── builtin-modules@1.1.1 
+│ │   │ ├── semver@5.3.0 
+│ │   │ └─┬ validate-npm-package-license@3.0.1 
+│ │   │   ├─┬ spdx-correct@1.0.2 
+│ │   │   │ └── spdx-license-ids@1.2.2 
+│ │   │   └── spdx-expression-parse@1.0.4 
+│ │   ├─┬ read-pkg-up@1.0.1 
+│ │   │ └─┬ read-pkg@1.1.0 
+│ │   │   ├─┬ load-json-file@1.1.0 
+│ │   │   │ ├─┬ parse-json@2.2.0 
+│ │   │   │ │ └─┬ error-ex@1.3.0 
+│ │   │   │ │   └── is-arrayish@0.2.1 
+│ │   │   │ └── pify@2.3.0 
+│ │   │   └── path-type@1.1.0 
+│ │   ├─┬ redent@1.0.0 
+│ │   │ ├─┬ indent-string@2.1.0 
+│ │   │ │ └── repeating@2.0.1 
+│ │   │ └── strip-indent@1.0.1 
+│ │   └── trim-newlines@1.0.0 
+│ ├── eventemitter2@0.4.14 
+│ ├── exit@0.1.2 
+│ ├─┬ findup-sync@0.3.0 
+│ │ └── glob@5.0.15 
+│ ├─┬ grunt-cli@1.2.0 
+│ │ └── resolve@1.1.7 
+│ ├── grunt-known-options@1.1.0 
+│ ├─┬ grunt-legacy-log@1.0.0 
+│ │ ├─┬ grunt-legacy-log-utils@1.0.0 
+│ │ │ └── lodash@4.3.0 
+│ │ └── underscore.string@3.2.3 
+│ ├─┬ grunt-legacy-util@1.0.0 
+│ │ ├── getobject@0.1.0 
+│ │ ├── lodash@4.3.0 
+│ │ └─┬ which@1.2.12 
+│ │   └── isexe@1.1.2 
+│ ├── iconv-lite@0.4.13 
+│ ├─┬ js-yaml@3.5.5 
+│ │ └── esprima@2.7.3 
+│ ├─┬ nopt@3.0.6 
+│ │ └── abbrev@1.0.9 
+│ └── rimraf@2.2.8 
+├─┬ grunt-autoprefixer@3.0.4 
+│ ├─┬ autoprefixer-core@5.2.1 
+│ │ ├── browserslist@0.4.0 
+│ │ ├── caniuse-db@1.0.30000580 
+│ │ └── num2fraction@1.2.2 
+│ ├─┬ chalk@1.0.0 
+│ │ ├── ansi-styles@2.2.1 
+│ │ ├── escape-string-regexp@1.0.5 
+│ │ ├─┬ has-ansi@1.0.3 
+│ │ │ └── ansi-regex@1.1.1 
+│ │ ├── strip-ansi@2.0.1 
+│ │ └── supports-color@1.3.1 
+│ ├── diff@1.3.2 
+│ └─┬ postcss@4.1.16 
+│   ├── es6-promise@2.3.0 
+│   ├── js-base64@2.1.9 
+│   └─┬ source-map@0.4.4 
+│     └── amdefine@1.0.1 
+├─┬ grunt-contrib-clean@1.0.0 
+│ ├── async@1.5.2 
+│ └── rimraf@2.5.4 
+├─┬ grunt-contrib-compress@1.3.0 
+│ ├─┬ archiver@1.2.0 
+│ │ ├─┬ archiver-utils@1.3.0 
+│ │ │ ├── lazystream@1.0.0 
+│ │ │ ├── lodash@4.17.0 
+│ │ │ └── normalize-path@2.0.1 
+│ │ ├── async@2.1.2 
+│ │ ├── buffer-crc32@0.2.5 
+│ │ ├── lodash@4.17.0 
+│ │ ├─┬ readable-stream@2.2.2 
+│ │ │ ├── buffer-shims@1.0.0 
+│ │ │ ├── core-util-is@1.0.2 
+│ │ │ ├── isarray@1.0.0 
+│ │ │ ├── process-nextick-args@1.0.7 
+│ │ │ ├── string_decoder@0.10.31 
+│ │ │ └── util-deprecate@1.0.2 
+│ │ ├─┬ tar-stream@1.5.2 
+│ │ │ ├─┬ bl@1.1.2 
+│ │ │ │ └── readable-stream@2.0.6 
+│ │ │ ├─┬ end-of-stream@1.1.0 
+│ │ │ │ └── once@1.3.3 
+│ │ │ └── xtend@4.0.1 
+│ │ └─┬ zip-stream@1.1.0 
+│ │   ├─┬ compress-commons@1.1.0 
+│ │   │ └── crc32-stream@1.0.0 
+│ │   └── lodash@4.17.0 
+│ ├─┬ chalk@1.1.3 
+│ │ ├─┬ has-ansi@2.0.0 
+│ │ │ └── ansi-regex@2.0.0 
+│ │ ├── strip-ansi@3.0.1 
+│ │ └── supports-color@2.0.0 
+│ ├── lodash@4.17.0 
+│ ├── pretty-bytes@3.0.1 
+│ └── stream-buffers@2.2.0 
+├─┬ grunt-contrib-concat@1.0.1 
+│ └── source-map@0.5.6 
+├─┬ grunt-contrib-connect@1.0.2 
+│ ├─┬ connect@3.5.0 
+│ │ ├─┬ debug@2.2.0 
+│ │ │ └── ms@0.7.1 
+│ │ ├─┬ finalhandler@0.5.0 
+│ │ │ ├── statuses@1.3.1 
+│ │ │ └── unpipe@1.0.0 
+│ │ ├── parseurl@1.3.1 
+│ │ └── utils-merge@1.0.0 
+│ ├── connect-livereload@0.5.4 
+│ ├── http2@3.3.6 
+│ ├─┬ morgan@1.7.0 
+│ │ ├── basic-auth@1.0.4 
+│ │ ├── depd@1.1.0 
+│ │ ├─┬ on-finished@2.3.0 
+│ │ │ └── ee-first@1.1.1 
+│ │ └── on-headers@1.0.1 
+│ ├─┬ opn@4.0.2 
+│ │ ├── object-assign@4.1.0 
+│ │ └─┬ pinkie-promise@2.0.1 
+│ │   └── pinkie@2.0.4 
+│ ├─┬ portscanner@1.0.0 
+│ │ └── async@0.1.15 
+│ ├─┬ serve-index@1.8.0 
+│ │ ├─┬ accepts@1.3.3 
+│ │ │ └── negotiator@0.6.1 
+│ │ ├── batch@0.5.3 
+│ │ ├── escape-html@1.0.3 
+│ │ ├─┬ http-errors@1.5.0 
+│ │ │ ├── inherits@2.0.1 
+│ │ │ └── setprototypeof@1.0.1 
+│ │ └─┬ mime-types@2.1.12 
+│ │   └── mime-db@1.24.0 
+│ └─┬ serve-static@1.11.1 
+│   ├── encodeurl@1.0.1 
+│   └─┬ send@0.14.1 
+│     ├── destroy@1.0.4 
+│     ├── etag@1.7.0 
+│     ├── fresh@0.3.0 
+│     └── range-parser@1.2.0 
+├─┬ grunt-contrib-copy@1.0.0 
+│ └── file-sync-cmp@0.1.1 
+├─┬ grunt-contrib-csslint@1.0.0 
+│ ├─┬ csslint@0.10.0 
+│ │ └── parserlib@0.2.5 
+│ ├── lodash@3.10.1 
+│ └── strip-json-comments@1.0.4 
+├─┬ grunt-contrib-cssmin@1.0.2 
+│ ├─┬ clean-css@3.4.20 
+│ │ └─┬ commander@2.8.1 
+│ │   └── graceful-readlink@1.0.1 
+│ └─┬ maxmin@1.1.0 
+│   ├─┬ gzip-size@1.0.0 
+│   │ ├─┬ browserify-zlib@0.1.4 
+│   │ │ └── pako@0.2.9 
+│   │ └─┬ concat-stream@1.5.2 
+│   │   ├── readable-stream@2.0.6 
+│   │   └── typedarray@0.0.6 
+│   └── pretty-bytes@1.0.4 
+├─┬ grunt-contrib-htmlmin@1.5.0 
+│ └─┬ html-minifier@2.1.7 
+│   ├─┬ change-case@3.0.0 
+│   │ ├── camel-case@3.0.0 
+│   │ ├── constant-case@2.0.0 
+│   │ ├── dot-case@2.1.0 
+│   │ ├── header-case@1.0.0 
+│   │ ├── is-lower-case@1.1.3 
+│   │ ├── is-upper-case@1.1.2 
+│   │ ├── lower-case@1.1.3 
+│   │ ├── lower-case-first@1.0.2 
+│   │ ├── no-case@2.3.0 
+│   │ ├── param-case@2.1.0 
+│   │ ├── pascal-case@2.0.0 
+│   │ ├── path-case@2.1.0 
+│   │ ├── sentence-case@2.1.0 
+│   │ ├── snake-case@2.1.0 
+│   │ ├── swap-case@1.1.2 
+│   │ ├── title-case@2.1.0 
+│   │ ├── upper-case@1.1.3 
+│   │ └── upper-case-first@1.1.2 
+│   ├── commander@2.9.0 
+│   ├── he@1.1.0 
+│   ├─┬ ncname@1.0.0 
+│   │ └── xml-char-classes@1.0.0 
+│   └── relateurl@0.2.7 
+├─┬ grunt-contrib-jshint@1.0.0 
+│ ├── hooker@0.2.3 
+│ └─┬ jshint@2.9.4 
+│   ├─┬ cli@1.0.1 
+│   │ └── glob@7.1.1 
+│   ├─┬ console-browserify@1.1.0 
+│   │ └── date-now@0.1.4 
+│   ├─┬ htmlparser2@3.8.3 
+│   │ ├── domelementtype@1.3.0 
+│   │ ├── domhandler@2.3.0 
+│   │ ├─┬ domutils@1.5.1 
+│   │ │ └─┬ dom-serializer@0.1.0 
+│   │ │   ├── domelementtype@1.1.3 
+│   │ │   └── entities@1.1.1 
+│   │ ├── entities@1.0.0 
+│   │ └─┬ readable-stream@1.1.14 
+│   │   └── isarray@0.0.1 
+│   ├── lodash@3.7.0 
+│   └── shelljs@0.3.0 
+├─┬ grunt-contrib-less@1.3.0 
+│ ├─┬ less@2.6.1 
+│ │ ├─┬ errno@0.1.4 
+│ │ │ └── prr@0.0.0 
+│ │ ├── graceful-fs@4.1.10 
+│ │ ├── image-size@0.4.0 
+│ │ ├── mime@1.3.4 
+│ │ ├─┬ mkdirp@0.5.1 
+│ │ │ └── minimist@0.0.8 
+│ │ ├─┬ promise@7.1.1 
+│ │ │ └── asap@2.0.5 
+│ │ ├─┬ request@2.78.0 
+│ │ │ ├── aws-sign2@0.6.0 
+│ │ │ ├── aws4@1.5.0 
+│ │ │ ├── caseless@0.11.0 
+│ │ │ ├─┬ combined-stream@1.0.5 
+│ │ │ │ └── delayed-stream@1.0.0 
+│ │ │ ├── forever-agent@0.6.1 
+│ │ │ ├─┬ form-data@2.1.2 
+│ │ │ │ └── asynckit@0.4.0 
+│ │ │ ├─┬ har-validator@2.0.6 
+│ │ │ │ ├── commander@2.9.0 
+│ │ │ │ └─┬ is-my-json-valid@2.15.0 
+│ │ │ │   ├── generate-function@2.0.0 
+│ │ │ │   ├─┬ generate-object-property@1.2.0 
+│ │ │ │   │ └── is-property@1.0.2 
+│ │ │ │   └── jsonpointer@4.0.0 
+│ │ │ ├─┬ hawk@3.1.3 
+│ │ │ │ ├── boom@2.10.1 
+│ │ │ │ ├── cryptiles@2.0.5 
+│ │ │ │ ├── hoek@2.16.3 
+│ │ │ │ └── sntp@1.0.9 
+│ │ │ ├─┬ http-signature@1.1.1 
+│ │ │ │ ├── assert-plus@0.2.0 
+│ │ │ │ ├─┬ jsprim@1.3.1 
+│ │ │ │ │ ├── extsprintf@1.0.2 
+│ │ │ │ │ ├── json-schema@0.2.3 
+│ │ │ │ │ └── verror@1.3.6 
+│ │ │ │ └─┬ sshpk@1.10.1 
+│ │ │ │   ├── asn1@0.2.3 
+│ │ │ │   ├── assert-plus@1.0.0 
+│ │ │ │   ├── bcrypt-pbkdf@1.0.0 
+│ │ │ │   ├─┬ dashdash@1.14.0 
+│ │ │ │   │ └── assert-plus@1.0.0 
+│ │ │ │   ├── ecc-jsbn@0.1.1 
+│ │ │ │   ├─┬ getpass@0.1.6 
+│ │ │ │   │ └── assert-plus@1.0.0 
+│ │ │ │   ├── jodid25519@1.0.2 
+│ │ │ │   ├── jsbn@0.1.0 
+│ │ │ │   └── tweetnacl@0.14.3 
+│ │ │ ├── is-typedarray@1.0.0 
+│ │ │ ├── isstream@0.1.2 
+│ │ │ ├── json-stringify-safe@5.0.1 
+│ │ │ ├── node-uuid@1.4.7 
+│ │ │ ├── oauth-sign@0.8.2 
+│ │ │ ├── qs@6.3.0 
+│ │ │ ├── stringstream@0.0.5 
+│ │ │ ├─┬ tough-cookie@2.3.2 
+│ │ │ │ └── punycode@1.4.1 
+│ │ │ └── tunnel-agent@0.4.3 
+│ │ └── source-map@0.5.6 
+│ └── lodash@4.17.0 
+├─┬ grunt-contrib-pug@1.0.0 
+│ └─┬ pug@2.0.0-beta6 
+│   ├─┬ pug-code-gen@1.1.0 
+│   │ ├─┬ constantinople@3.1.0 
+│   │ │ ├── acorn@3.3.0 
+│   │ │ └── is-expression@2.1.0 
+│   │ ├── doctypes@1.1.0 
+│   │ ├── js-stringify@1.0.2 
+│   │ ├── pug-attrs@2.0.1 
+│   │ ├── pug-error@1.3.1 
+│   │ ├── void-elements@2.0.1 
+│   │ └─┬ with@5.1.1 
+│   │   └── acorn-globals@3.0.0 
+│   ├─┬ pug-filters@1.2.4 
+│   │ ├─┬ jstransformer@1.0.0 
+│   │ │ └── is-promise@2.1.0 
+│   │ └── pug-walk@1.0.0 
+│   ├─┬ pug-lexer@2.3.0 
+│   │ ├─┬ character-parser@2.2.0 
+│   │ │ └── is-regex@1.0.3 
+│   │ └─┬ is-expression@3.0.0 
+│   │   └── acorn@4.0.3 
+│   ├── pug-linker@1.0.1 
+│   ├── pug-load@2.0.3 
+│   ├─┬ pug-parser@2.0.1 
+│   │ └── token-stream@0.0.1 
+│   ├── pug-runtime@2.0.2 
+│   └── pug-strip-comments@1.0.1 
+├─┬ grunt-contrib-qunit@0.7.0 
+│ └─┬ grunt-lib-phantomjs@0.6.0 
+│   ├─┬ phantomjs@1.9.20 
+│   │ ├─┬ extract-zip@1.5.0 
+│   │ │ ├─┬ concat-stream@1.5.0 
+│   │ │ │ └── readable-stream@2.0.6 
+│   │ │ ├── debug@0.7.4 
+│   │ │ ├─┬ mkdirp@0.5.0 
+│   │ │ │ └── minimist@0.0.8 
+│   │ │ └─┬ yauzl@2.4.1 
+│   │ │   └─┬ fd-slicer@1.0.1 
+│   │ │     └── pend@1.2.0 
+│   │ ├─┬ fs-extra@0.26.7 
+│   │ │ ├── jsonfile@2.4.0 
+│   │ │ └── klaw@1.3.1 
+│   │ ├─┬ hasha@2.2.0 
+│   │ │ └── is-stream@1.1.0 
+│   │ ├── kew@0.7.0 
+│   │ ├── progress@1.1.8 
+│   │ ├─┬ request@2.67.0 
+│   │ │ ├─┬ bl@1.0.3 
+│   │ │ │ └── readable-stream@2.0.6 
+│   │ │ ├─┬ form-data@1.0.1 
+│   │ │ │ └─┬ async@2.1.2 
+│   │ │ │   └── lodash@4.17.0 
+│   │ │ ├── qs@5.2.1 
+│   │ │ └── tough-cookie@2.2.2 
+│   │ └─┬ request-progress@2.0.1 
+│   │   └── throttleit@1.0.0 
+│   ├── semver@1.0.14 
+│   └─┬ temporary@0.0.8 
+│     └── package@1.0.1 
+├─┬ grunt-contrib-uglify@1.0.2 
+│ ├── lodash@4.17.0 
+│ ├─┬ uglify-js@2.6.4 
+│ │ ├── async@0.2.10 
+│ │ ├── source-map@0.5.6 
+│ │ ├── uglify-to-browserify@1.0.2 
+│ │ └─┬ yargs@3.10.0 
+│ │   ├── camelcase@1.2.1 
+│ │   ├─┬ cliui@2.1.0 
+│ │   │ ├─┬ center-align@0.1.3 
+│ │   │ │ ├─┬ align-text@0.1.4 
+│ │   │ │ │ ├─┬ kind-of@3.0.4 
+│ │   │ │ │ │ └── is-buffer@1.1.4 
+│ │   │ │ │ ├── longest@1.0.1 
+│ │   │ │ │ └── repeat-string@1.6.1 
+│ │   │ │ └── lazy-cache@1.0.4 
+│ │   │ ├── right-align@0.1.3 
+│ │   │ └── wordwrap@0.0.2 
+│ │   └── window-size@0.1.0 
+│ └── uri-path@1.0.0 
+├─┬ grunt-contrib-watch@1.0.0 
+│ ├─┬ gaze@1.1.2 
+│ │ └─┬ globule@1.1.0 
+│ │   ├── glob@7.1.1 
+│ │   └── lodash@4.16.6 
+│ └─┬ tiny-lr@0.2.1 
+│   ├─┬ body-parser@1.14.2 
+│   │ ├── bytes@2.2.0 
+│   │ ├── content-type@1.0.2 
+│   │ ├── http-errors@1.3.1 
+│   │ ├── qs@5.2.0 
+│   │ ├─┬ raw-body@2.1.7 
+│   │ │ └── bytes@2.4.0 
+│   │ └─┬ type-is@1.6.13 
+│   │   └── media-typer@0.3.0 
+│   ├─┬ faye-websocket@0.10.0 
+│   │ └─┬ websocket-driver@0.6.5 
+│   │   └── websocket-extensions@0.1.1 
+│   ├── livereload-js@2.2.2 
+│   └── qs@5.1.0 
+├─┬ grunt-csscomb@3.1.1 
+│ └─┬ csscomb@3.1.7 
+│   ├── commander@2.0.0 
+│   ├─┬ csscomb-core@3.0.0-3 
+│   │ ├─┬ minimatch@0.2.12 
+│   │ │ ├── lru-cache@2.7.3 
+│   │ │ └── sigmund@1.0.1 
+│   │ └─┬ vow-fs@0.3.2 
+│   │   ├─┬ glob@3.2.8 
+│   │   │ └── minimatch@0.2.14 
+│   │   ├── node-uuid@1.4.0 
+│   │   └── vow-queue@0.3.1 
+│   └── gonzales-pe@3.0.0-28 
+├── grunt-exec@1.0.1 
+├── grunt-html@8.0.2 
+├─┬ grunt-jekyll@0.4.4 
+│ └─┬ tmp@0.0.28 
+│   └── os-tmpdir@1.0.2 
+├─┬ grunt-jscs@3.0.1 
+│ ├─┬ jscs@3.0.7 
+│ │ ├─┬ cli-table@0.3.1 
+│ │ │ └── colors@1.0.3 
+│ │ ├── commander@2.9.0 
+│ │ ├─┬ cst@0.4.7 
+│ │ │ ├─┬ babel-runtime@6.18.0 
+│ │ │ │ ├── core-js@2.4.1 
+│ │ │ │ └── regenerator-runtime@0.9.6 
+│ │ │ ├── babylon@6.13.1 
+│ │ │ └─┬ source-map-support@0.4.6 
+│ │ │   └── source-map@0.5.6 
+│ │ ├── estraverse@4.2.0 
+│ │ ├── glob@5.0.15 
+│ │ ├─┬ js-yaml@3.4.6 
+│ │ │ └── inherit@2.2.6 
+│ │ ├─┬ jscs-jsdoc@2.0.0 
+│ │ │ ├── comment-parser@0.3.1 
+│ │ │ └── jsdoctypeparser@1.2.0 
+│ │ ├── jscs-preset-wikimedia@1.0.0 
+│ │ ├─┬ jsonlint@1.6.2 
+│ │ │ ├── JSV@4.0.2 
+│ │ │ └─┬ nomnom@1.8.1 
+│ │ │   ├─┬ chalk@0.4.0 
+│ │ │   │ ├── ansi-styles@1.0.0 
+│ │ │   │ ├── has-color@0.1.7 
+│ │ │   │ └── strip-ansi@0.1.1 
+│ │ │   └── underscore@1.6.0 
+│ │ ├── natural-compare@1.2.2 
+│ │ ├── pathval@0.1.1 
+│ │ ├─┬ prompt@0.2.14 
+│ │ │ ├── pkginfo@0.4.0 
+│ │ │ ├─┬ read@1.0.7 
+│ │ │ │ └── mute-stream@0.0.6 
+│ │ │ ├── revalidator@0.1.8 
+│ │ │ ├─┬ utile@0.2.1 
+│ │ │ │ ├── async@0.2.10 
+│ │ │ │ ├── deep-equal@1.0.1 
+│ │ │ │ ├── i@0.3.5 
+│ │ │ │ └── ncp@0.4.2 
+│ │ │ └─┬ winston@0.8.3 
+│ │ │   ├── async@0.2.10 
+│ │ │   ├── colors@0.6.2 
+│ │ │   ├── cycle@1.0.3 
+│ │ │   ├── eyes@0.1.8 
+│ │ │   ├── pkginfo@0.3.1 
+│ │ │   └── stack-trace@0.0.9 
+│ │ ├── reserved-words@0.1.1 
+│ │ ├─┬ strip-bom@2.0.0 
+│ │ │ └── is-utf8@0.2.1 
+│ │ ├── to-double-quotes@2.0.0 
+│ │ ├── to-single-quotes@2.0.1 
+│ │ ├── vow@0.4.13 
+│ │ ├─┬ vow-fs@0.3.6 
+│ │ │ ├── glob@7.1.1 
+│ │ │ ├── uuid@2.0.3 
+│ │ │ └── vow-queue@0.4.2 
+│ │ └── xmlbuilder@3.1.0 
+│ ├── lodash@4.6.1 
+│ └── vow@0.4.4 
+├─┬ grunt-saucelabs@9.0.0 
+│ ├── colors@1.1.2 
+│ ├── lodash@4.13.1 
+│ ├── q@1.4.1 
+│ ├─┬ requestretry@1.9.1 
+│ │ ├── extend@3.0.0 
+│ │ ├─┬ fg-lodash@0.0.2 
+│ │ │ ├── lodash@2.4.2 
+│ │ │ └── underscore.string@2.3.3 
+│ │ └── when@3.7.7 
+│ ├─┬ sauce-tunnel@2.5.0 
+│ │ └─┬ split@1.0.0 
+│ │   └── through@2.3.8 
+│ └─┬ saucelabs@1.2.0 
+│   └─┬ https-proxy-agent@1.0.0 
+│     └─┬ agent-base@2.0.1 
+│       └── semver@5.0.3 
+├─┬ load-grunt-tasks@3.5.2 
+│ ├── arrify@1.0.1 
+│ ├─┬ multimatch@2.1.0 
+│ │ ├── array-differ@1.0.0 
+│ │ └─┬ array-union@1.0.2 
+│ │   └── array-uniq@1.0.3 
+│ ├─┬ pkg-up@1.0.0 
+│ │ └─┬ find-up@1.1.2 
+│ │   └── path-exists@2.1.0 
+│ └─┬ resolve-pkg@0.1.0 
+│   └── resolve-from@2.0.0 
+├─┬ markdown-it@7.0.1 
+│ ├─┬ argparse@1.0.9 
+│ │ └── sprintf-js@1.0.3 
+│ ├── entities@1.1.1 
+│ ├── linkify-it@2.0.2 
+│ ├── mdurl@1.0.1 
+│ └── uc.micro@1.0.3 
+├─┬ shelljs@0.7.5 
+│ ├── interpret@1.0.1 
+│ └── rechoir@0.6.2 
+├─┬ shx@0.1.4 
+│ └── minimist@1.2.0 
+└─┬ time-grunt@1.4.0 
+  ├─┬ date-time@1.1.0 
+  │ └── time-zone@0.1.0 
+  ├── figures@1.7.0 
+  ├── number-is-nan@1.0.1 
+  ├─┬ pretty-ms@2.1.0 
+  │ ├── is-finite@1.0.2 
+  │ ├── parse-ms@1.0.1 
+  │ └── plur@1.0.0 
+  └── text-table@0.2.0 
+
+Erics-iMac:bootstrap saga$ 
+  [Restored]
+Last login: Mon Nov 14 13:24:50 on console
+Erics-iMac:bootstrap saga$ cd ../
+Erics-iMac:node_modules saga$ cd ../
+Erics-iMac:saffellart saga$ cd ../
+Erics-iMac:projects saga$ ls
+BandDConstruction	Development		TheTen			gradientmaps		server stuff
+DMC WP			RGA			TrainingLab		holder			sublime - workspace
+DMCStrategies		Testing			Vagrant			incase
+DetroitDelivers		Testy			Vagrantfile		saffellart
+Erics-iMac:projects saga$ cd BandDConstruction/
+Erics-iMac:BandDConstruction saga$ ls
+README.md	Vagrantfile	custom fields	portfolio	public
+Erics-iMac:BandDConstruction saga$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'scotch/box' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Remote connection disconnect. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 4.3.28
+    default: VirtualBox Version: 5.1
+==> default: Setting hostname...
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /var/www => /Users/saga/projects/BandDConstruction
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+Erics-iMac:BandDConstruction saga$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'scotch/box' is up to date...
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+Erics-iMac:BandDConstruction saga$ vagrant ssh-config > .ssh.config
+Erics-iMac:BandDConstruction saga$ ./wifi-password
+-bash: ./wifi-password: No such file or directory
+Erics-iMac:BandDConstruction saga$ cd ~
+Erics-iMac:~ saga$ ./wifi-password
+-bash: ./wifi-password: No such file or directory
+Erics-iMac:~ saga$ security find-generic-password -wa Intheblacksuites
+itbsuites313
+Erics-iMac:~ saga$ security find-generic-password -wa Intheblacksuites
+itbsuites313
+Erics-iMac:~ saga$ security find-generic-password -wa Intheblacksuites
+itbsuites313
+Erics-iMac:~ saga$ security find-generic-password -wa Intheblacksuites
+itbsuites313
+Erics-iMac:~ saga$ 
