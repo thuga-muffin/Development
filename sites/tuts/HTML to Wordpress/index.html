@@ -4,6 +4,7 @@
 	<title>A Whole New Siiiiiite</title>
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen" title="master" charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/> -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
@@ -64,20 +65,85 @@
 		</div>
 	</section>
 
+	<section class="container feat-home">
+		<div class="row">
+			
+			<div class="col-md-4 widget-container">
+				<figure></figure>
+			</div>
+
+			<div class="col-md-4 widget-container">
+				<figure></figure>
+			</div>
+
+			<div class="col-md-4 widget-container">
+				<figure></figure>
+			</div>
+
+		</div>
+	</section>
+
 	<section class="container">
 		<div class="row">
 
 			<article id="content" class="col-md-9">
 
-				<div class="entry-meta">
+				<!-- <div class="entry-meta">
 					<h2>This is the homepage</h2>
 					<img class="size-large" alt="" src="img/featured-image.jpg">
-				</div>	<!-- section.entry-meta -->
+				</div>	section.entry-meta
 
 				<div class="entry-content">
 					<img class="alignright" src="img/another-image.jpg">
 				</div>
-				<div class="entry-meta"></div>
+				<div class="entry-meta"></div> -->
+
+			<div class="container" id="post-1">
+				
+				<div class="row">					
+					<div class="col-md-12">
+						
+						<div class="post-slider">
+							<div class="slick-item">
+								<img src="img/flower-1.jpeg">
+							</div>
+							<div class="slick-item">
+								<img src="img/flower-2.jpeg">
+							</div>
+							<div class="slick-item">
+								<img src="img/flower-3.jpeg">
+							</div>
+							<div class="slick-item">
+								<img src="img/flower-4.jpeg">
+							</div>
+						</div>
+
+						<div class="post-slider-nav">
+							<div class="slick-item">
+								<img src="img/flower-1.jpeg">
+							</div>
+							<div class="slick-item">
+								<img src="img/flower-2.jpeg">
+							</div>
+							<div class="slick-item">
+								<img src="img/flower-3.jpeg">
+							</div>
+							<div class="slick-item">
+								<img src="img/flower-4.jpeg">
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div>					
+					<div>
+						
+					</div>
+				</div>
+
+			</div>
+
 
 			</article>   <!-- div#content -->
 
@@ -142,8 +208,70 @@
 
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="js/npm.js"></script>
 <script type="text/javascript" charset="utf-8">
 	
+	/*----------  slick.js  ----------*/
+	
+
+		 $('.post-slider').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  asNavFor: '.slider-nav'
+		});
+		$('.post-slider-nav').slick({
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  asNavFor: '.post-slider',
+		  dots: true,
+		  centerMode: true,
+		  focusOnSelect: true
+		});
+
+		// $('.portfolio-item-slider').on('init', function(event, slick, currentSlide){
+		//   var nrCurrentSlide = slick.currentSlide + 1, // din cauza ca e array si incepe de la 0
+		//       totalSlidesPerPage = nrCurrentSlide + 3; // daca ai 5 thumb-uri pe pagina pui + 4
+		//   $('.controls').html(nrCurrentSlide + " - " + totalSlidesPerPage + " of " + slick.slideCount);
+		// });
+
+		// $('.portfolio-thumb-slider').slick({
+		//   slidesToShow: 4,
+		//   slidesToScroll: 1,
+		//   asNavFor: '.portfolio-item-slider',
+		//   dots: false,
+		//   arrows: false,
+		//   focusOnSelect: true,
+		//   infinite: false
+		// });
+
+		// $('.portfolio-item-slider').slick({
+		//   slidesToShow: 1,
+		//   slidesToScroll: 1,
+		//   arrows: false,
+		//   asNavFor: '.portfolio-thumb-slider',
+		//   infinite: false
+		// });
+
+		// var current = 0; // current slider dupa refresh
+		// $('.portfolio-thumb-slider .slick-slide:not(.slick-cloned)').eq(current).addClass('slick-current');
+		// $('.portfolio-item-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		//   current = currentSlide;
+		//   $('.portfolio-thumb-slider .slick-slide').removeClass('slick-current');
+		//   $('.portfolio-thumb-slider .slick-slide:not(.slick-cloned)').eq(current).addClass('slick-current');
+		//   var nrCurrentSlide = slick.currentSlide + 1, // din cauza ca e array si incepe de la 0
+		//       totalSlidesPerPage = nrCurrentSlide + 3; // daca ai 5 thumb-uri pe pagina pui + 4
+
+		//   if(totalSlidesPerPage > slick.slideCount) {
+		//     $('.controls').html(nrCurrentSlide + " - " + slick.slideCount + " of " + slick.slideCount);
+		//   } else {
+		//     $('.controls').html(nrCurrentSlide + " - " + totalSlidesPerPage + " of " + slick.slideCount);
+		//   }
+		// });
+
+
 </script>
 
 </body>
