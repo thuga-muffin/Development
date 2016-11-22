@@ -28,6 +28,16 @@
 
 
 
+/*=======================================
+=            E L E M E N T S            =
+=======================================*/
+
+a, button	{
+	outline: 0;
+}
+
+
+
 /*************************************/
 /*			G E N E R A L			*/
 /************************************/
@@ -120,15 +130,83 @@ img	{
 	
 header	{}
 
+
+/*=====================================
+=            W I D G E T S            =
+=====================================*/
+
+.post-gallery	{
+
+	.post-slider	{
+		width: 100%;
+		height: 400px;
+
+		margin-bottom: 15px;
+
+		div	{
+			height: 100%;
+			width: 100%;
+
+			img	{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+	}
+
+	button	{
+		background-color: rgba( 0, 0, 0, 0.3);
+		color: #fff;
+
+		border: none;
+
+		width: 60px;
+		height: 60px;
+
+		position: absolute;
+		top: 170px;
+
+		z-index: 99;
+
+		&.prev	{
+			left: 0;
+		}
+
+		&.next	{
+			right: 0;
+		}
+	}
+
+	.post-slider-nav	{
+		height: 150px;
+
+		overflow: hidden;
+
+	}
+}
+
+
+
 /*************************************/
 /*				H O M E				*/
 /************************************/
+
+
+// hero
 
 .hero-home	{
 	height: 500px;
 
 	background-color: @gray;
 }
+
+article#content	{
+	padding: 0;
+}
+
+
+
 
 
 

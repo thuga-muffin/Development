@@ -869,6 +869,13 @@
 /*************************************/
 /*	    	V A R I A B L E S		*/
 /************************************/
+/*=======================================
+=            E L E M E N T S            =
+=======================================*/
+a,
+button {
+  outline: 0;
+}
 /*************************************/
 /*			G E N E R A L			*/
 /************************************/
@@ -925,10 +932,49 @@ img {
 /*************************************/
 /*			H E A D E R 			*/
 /************************************/
+/*=====================================
+=            W I D G E T S            =
+=====================================*/
+.post-gallery .post-slider {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 15px;
+}
+.post-gallery .post-slider div {
+  height: 100%;
+  width: 100%;
+}
+.post-gallery .post-slider div img {
+  width: 100%;
+  height: auto;
+}
+.post-gallery button {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border: none;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 170px;
+  z-index: 99;
+}
+.post-gallery button.prev {
+  left: 0;
+}
+.post-gallery button.next {
+  right: 0;
+}
+.post-gallery .post-slider-nav {
+  height: 150px;
+  overflow: hidden;
+}
 /*************************************/
 /*				H O M E				*/
 /************************************/
 .hero-home {
   height: 500px;
   background-color: #555555;
+}
+article#content {
+  padding: 0;
 }

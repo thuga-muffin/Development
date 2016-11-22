@@ -4,7 +4,7 @@
 	<title>A Whole New Siiiiiite</title>
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen" title="master" charset="utf-8">
-	<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/> -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
@@ -53,7 +53,7 @@
 	</div>
 </nav>
 
-<main>
+<main id="home">
 
 	<section class="container hero-home">
 		<div class="row">
@@ -98,51 +98,87 @@
 				</div>
 				<div class="entry-meta"></div> -->
 
-			<div class="container" id="post-1">
-				
-				<div class="row">					
-					<div class="col-md-12">
+				<div id="post-1">
+
+						<div class="post-gallery">
 						
-						<div class="post-slider">
-							<div class="slick-item">
-								<img src="img/flower-1.jpeg">
+							<button class="entypo-left-open-big prev " role="button" aria-label="previous"></button>	
+
+							<div class="post-slider">
+
+								<div class="slick-item">
+									<img src="img/flower-1.jpeg">
+								</div>
+								<div class="slick-item">
+									<img src="img/flower-2.jpeg">
+								</div>
+								<div class="slick-item">
+									<img src="img/flower-3.jpeg">
+								</div>
+								<div class="slick-item">
+									<img src="img/flower-4.jpeg">
+								</div>
+
+							</div>	<!-- .post-slider -->
+
+							<button class="entypo-right-open-big next" role="button" aria-label="next"></button>
+
+							<div class="post-slider-nav">
+								<div class="slick-item">
+									<img src="img/flower-1.jpeg">
+								</div>
+								<div class="slick-item">
+									<img src="img/flower-2.jpeg">
+								</div>
+								<div class="slick-item">
+									<img src="img/flower-3.jpeg">
+								</div>
+								<div class="slick-item">
+									<img src="img/flower-4.jpeg">
+								</div>
+							</div>	<!-- .post-slider-nav -->
+
+						</div>	<!-- .post-gallery -->
+
+					<div class="post-meta">
+
+						<div class="row">					
+
+							<div class="col-md-12">
+
+								<date class="entry-meta">
+									<p>7 July 2016</p>
+									<p>3:43 PM</p>
+								</date>
+
+
+								<div class="post-comments">
+									<div>
+										<p>8</p>
+									</div>
+								</div>
+
 							</div>
-							<div class="slick-item">
-								<img src="img/flower-2.jpeg">
-							</div>
-							<div class="slick-item">
-								<img src="img/flower-3.jpeg">
-							</div>
-							<div class="slick-item">
-								<img src="img/flower-4.jpeg">
-							</div>
+
+						</div>	<!-- .row -->
+
+						<div>
+							<h2>Wedding Shoot</h2>
 						</div>
 
-						<div class="post-slider-nav">
-							<div class="slick-item">
-								<img src="img/flower-1.jpeg">
+					</div>	<!-- .post-meta -->
+
+					<div class="post-content post-snippet">
+						<div class="row">
+							
+							<div class="col-md-12">
+								<p></p>
 							</div>
-							<div class="slick-item">
-								<img src="img/flower-2.jpeg">
-							</div>
-							<div class="slick-item">
-								<img src="img/flower-3.jpeg">
-							</div>
-							<div class="slick-item">
-								<img src="img/flower-4.jpeg">
-							</div>
+
 						</div>
-
 					</div>
-				</div>
 
-				<div>					
-					<div>
-						
-					</div>
-				</div>
-
-			</div>
+				</div>	<!-- .container -->
 
 
 			</article>   <!-- div#content -->
@@ -220,15 +256,17 @@
 		  slidesToScroll: 1,
 		  arrows: false,
 		  fade: true,
-		  asNavFor: '.slider-nav'
+		  asNavFor: '.post-slider-nav'
 		});
 		$('.post-slider-nav').slick({
 		  slidesToShow: 3,
 		  slidesToScroll: 1,
 		  asNavFor: '.post-slider',
-		  dots: true,
+		  dots: false,
 		  centerMode: true,
-		  focusOnSelect: true
+		  focusOnSelect: true,
+		  prevArrow: $('.prev'),
+		  nextArrow: $('.next'),
 		});
 
 		// $('.portfolio-item-slider').on('init', function(event, slick, currentSlide){
