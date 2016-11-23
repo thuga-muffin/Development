@@ -36,6 +36,10 @@ a, button	{
 	outline: 0;
 }
 
+button h3	{
+	margin: 0;
+}
+
 
 
 /*************************************/
@@ -183,9 +187,45 @@ header	{}
 
 		overflow: hidden;
 
+		img	{
+			margin: 0 10px;
+		}
+
 	}
 }
 
+/*================================
+=            P O S T             =
+================================*/
+
+.post	{
+	.post-meta	{
+		date	{
+			float: left;
+		}
+
+		.post-comments	{
+			float: right;
+		}
+	}
+
+	&:after	{
+		content: '';
+		background-color: @gray-lighter;
+
+		height: 1px;
+		width: 80%;
+
+		margin: 50px 10%;
+
+		display: block;
+	}
+}
+
+.post-meta,
+.post-content	{
+	padding: 0 30px;
+}
 
 
 /*************************************/
@@ -199,6 +239,22 @@ header	{}
 	height: 500px;
 
 	background-color: @gray;
+}
+
+.feat-home	{
+	padding: 50px 15px;
+	margin: 30px auto;
+
+	figure	{
+		background-color: @gray-lighter;
+
+		height: 150px;
+		width: 150px;
+
+		border-radius: 50%;
+
+		margin: 0 auto;
+	}
 }
 
 article#content	{

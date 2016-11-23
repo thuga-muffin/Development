@@ -876,6 +876,9 @@ a,
 button {
   outline: 0;
 }
+button h3 {
+  margin: 0;
+}
 /*************************************/
 /*			G E N E R A L			*/
 /************************************/
@@ -968,12 +971,47 @@ img {
   height: 150px;
   overflow: hidden;
 }
+.post-gallery .post-slider-nav img {
+  margin: 0 10px;
+}
+/*================================
+=            P O S T             =
+================================*/
+.post .post-meta date {
+  float: left;
+}
+.post .post-meta .post-comments {
+  float: right;
+}
+.post:after {
+  content: '';
+  background-color: #eeeeee;
+  height: 1px;
+  width: 80%;
+  margin: 50px 10%;
+  display: block;
+}
+.post-meta,
+.post-content {
+  padding: 0 30px;
+}
 /*************************************/
 /*				H O M E				*/
 /************************************/
 .hero-home {
   height: 500px;
   background-color: #555555;
+}
+.feat-home {
+  padding: 50px 15px;
+  margin: 30px auto;
+}
+.feat-home figure {
+  background-color: #eeeeee;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 article#content {
   padding: 0;
