@@ -2,3 +2,5 @@
 puts "Oh no" if true
 puts "Oh Yes" unless true
 puts 8 == 8 ? "it seemes you're on to something" : "think again young chap"
+
+[1, 2, 3].respond_to?(:push)

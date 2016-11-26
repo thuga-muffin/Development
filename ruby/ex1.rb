@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 
 puts "yo momma fat"
 puts "yo momma this"
