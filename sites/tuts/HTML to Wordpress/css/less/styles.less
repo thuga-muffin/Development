@@ -6,17 +6,28 @@
 /*		icon font		*/
 
 @import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url('https://fonts.googleapis.com/css?family=Abhaya+Libre');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
 
 /* entypo */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
 }
-	
+
+
+
+p	{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
 
 
 /*************************************/
 /*	    	V A R I A B L E S		*/
 /************************************/
+
+@serif: 'Abhaya Libre', serif;
+@sans-serif: 'Source Sans Pro', sans-serif;
 
 // Wireframe Me
 
@@ -25,12 +36,44 @@
 @gray:         lighten(#000, 33.5%); // #555
 @gray-light:   lighten(#000, 46.7%); // #777
 @gray-lighter: lighten(#000, 93.5%); // #eee
+@darkest:	   #000;
 
+@font-color: #333;
+@link-color: ;
 
+@in-sine: cubic-bezier(0.47, 0, 0.75, 0.72);
+
+.trans( @property, 
+		@dur: .5s, 
+		@ease: ease-in )	{
+
+	transition: @property @dur @ease;
+	-o-transition: @property @dur @ease;
+	-ms-transition: @property @dur @ease;
+	-moz-transition: @property @dur @ease;
+	-webkit-transition: @property @dur @ease;
+}
+
+.transform(@property)	{
+	transform: @property;
+	-o-transform: @property;
+	-ms-transform: @property;
+	-moz-transform: @property;
+	-webkit-transform: @property;
+}
 
 /*=======================================
 =            E L E M E N T S            =
 =======================================*/
+
+*	{
+	outline: 0;
+}
+
+a:hover	{
+	text-decoration: none;
+	cursor: pointer;
+}
 
 a, button	{
 	outline: 0;
@@ -62,52 +105,6 @@ main	{
 
 
 
-/*	Images	*/
-
-img	{
-	max-width: 100%;
-}
-
-	#content img	{
-		height: auto;
-		width: auto;
-
-		margin: 0;
-	}
-
-	#content .alignleft,
-	#content img.alignleft	{
-		margin: 4px 4% 4px 0;
-
-		float: left;
-	}
-
-	#content .alignright,
-	#content img.alignright	{
-		margin: 4px 0 4px 4%;
-
-		float: right;
-	}
-
-	#content .aligncenter,
-	#content img.aligncenter	{
-		margin-left: auto;
-		margin-right: auto;
-
-		display: block;
-		clear: both;
-	}
-
-	#content .alignleft,
-	#content .alignright,
-	#content .aligncenter	{
-		margin-bottom: 12px;
-	}
-
-	
-
-
-
 /*************************************/
 /*			W I D G E T S			*/
 /************************************/
@@ -115,12 +112,47 @@ img	{
 	
 .social-media	{
 
+	.tooltip	{
+		background-color: transparent;
+
+		&.in	{
+			filter: alpha(opacity=100);
+			opacity: 1;
+		}
+	}
+
+	.tooltip-inner	{
+		color: @font-color;
+		font-family: @sans-serif;
+		background: #fff;
+
+		opacity: 1;
+
+		border: 1px solid @gray-light;
+		border-radius: 0;
+	}
+
+	.tooltip-arrow	{
+		display: none;
+	}
 
 	ul	{
 		list-style: none;
 
-		li	{
-			float: left;
+		a	{
+			color: @font-color;
+			display: inline-block;
+
+			li	{
+				float: left;
+
+				margin: 0 15px;
+			}
+
+			&:hover li	{
+				.transform(scale(1.5));
+				.trans( @property: transform, @dur: .2s )
+			}
 		}
 
 	}
@@ -132,7 +164,113 @@ img	{
 /*			H E A D E R 			*/
 /************************************/
 	
-header	{}
+nav#main-nav	{
+	padding: 0;
+
+		.row	{
+			margin: 0;
+
+			div[class|= col]	{
+				padding: 0;
+			}
+		}
+
+	header	{
+		h3	{
+			font-family: @serif;
+
+			text-transform: uppercase;
+			letter-spacing: 1px;
+
+			a	{
+				color: #333;
+			}
+		}
+
+		.social-media	{
+
+			ul	{
+				float: right;
+
+				padding: 0;
+				margin: 20px 0 0;
+
+			}
+		}
+	}
+
+	ul.nav	{
+		border: 1px solid @darkest;
+		border-left: none;
+		border-right: none;
+		border-bottom: none;
+
+		margin: 0 0 5px;
+
+
+		li	{
+			font-family: 'Source Sans Pro', sans-serif;
+
+			text-transform: uppercase;
+			text-align: left;
+			letter-spacing: 1px;
+
+			a	{
+				color: #333;
+
+				text-align: left;
+
+				border-radius: 0;
+
+				padding: 10px 0;
+			}
+
+				a:hover	{
+					background-color: transparent;
+				}
+
+				a:after	{
+					content: '';
+
+					background-color: @darkest;
+
+					width: 0;
+					height: 2px;
+
+					position: absolute;
+					bottom: 0;
+					left: 0;
+
+					.trans( @property: width, 
+							@dur: .1s, 
+							@ease: @in-sine )
+				}
+
+					a:hover:after	{
+						width: 80%;
+
+						.trans( @property: width, 
+								@ease: @in-sine )
+					}
+
+			&.active a	{
+				background-color: transparent;
+				color: initial;
+			}
+		}
+	}
+
+	&.stuck	{
+		background: #fff;
+
+		width: 100%;
+
+		padding: 0 30px;
+
+		position: fixed;
+		top: 0;
+	}
+}
 
 
 /*=====================================
@@ -188,6 +326,9 @@ header	{}
 		overflow: hidden;
 
 		img	{
+			width: 100%;
+			height: auto;
+
 			margin: 0 10px;
 		}
 

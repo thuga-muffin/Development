@@ -5,32 +5,56 @@
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen" title="master" charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
-<body>
+<body onscroll="stick()">
 
-<header class="container">
-	<div class="row">
-
-		<div class="col-md-6 site-name">
-			<h5 class="one-half-left" id="site-title"><a title="Creating a Wordpress theme from static html - home" rel="home">Adonis Gardens</a></h5>
-		</div>
-
-		<aside class="col-md-6 header widget-area" role="complementary">
-			<div class="widget-container social-media">
-				<ul>
-					<li class="entypo-facebook"></li>
-					<li class="entypo-twitter"></li>
-					<li class="entypo-tumblr"></li>
-				</ul>
-			</div>
-		</aside>
-		
-	</div>	<!-- .row -->
-</header>
 
 <nav id="main-nav" class="container">
+
+	<header>
+		<div class="row">
+
+			<div class="col-md-6 site-name">
+				<h3 class="one-half-left" id="site-title"><a title="Creating a Wordpress theme from static html - home" rel="home">Adonis Gardens</a></h3>
+			</div>
+
+			<aside class="col-md-6 header widget-area" role="complementary">
+				<div class="widget-container social-media">
+					<ul>
+						<a href="#" 
+							data-toggle="tooltip"
+							data-placement="bottom"
+							data-trigger="hover"
+							data-title="Facebook">
+
+				            <li class="entypo-facebook"></li>
+			            </a>
+						<a href="#" 
+							data-toggle="tooltip"
+							data-placement="bottom"
+							data-trigger="hover"
+							data-title="Twitter">
+
+				            <li class="entypo-twitter"></li>
+			            </a>
+						<a href="#" 
+							data-toggle="tooltip"
+							data-placement="bottom"
+							data-trigger="hover"
+							data-title="Tumblr">
+
+				            <li class="entypo-tumblr"></li>
+			            </a>
+					</ul>
+				</div>
+			</aside>
+			
+		</div>	<!-- .row -->
+	</header>
+
 	<div class="row">
 		<div class="col-md-12">
 
@@ -107,16 +131,24 @@
 							<div class="post-slider">
 
 								<div class="slick-item">
-									<img src="img/flower-1.jpeg">
+									<a href="img/flower-1.jpeg" data-lightbox="post-1-img-reel">
+										<img src="img/flower-1.jpeg">
+									</a>
 								</div>
 								<div class="slick-item">
-									<img src="img/flower-2.jpeg">
+									<a href="img/flower-2.jpeg" data-lightbox="post-1-img-reel">
+										<img src="img/flower-2.jpeg">
+									</a>
 								</div>
 								<div class="slick-item">
-									<img src="img/flower-3.jpeg">
+									<a href="img/flower-3.jpeg" data-lightbox="post-1-img-reel">
+										<img src="img/flower-3.jpeg">
+									</a>
 								</div>
 								<div class="slick-item">
-									<img src="img/flower-4.jpeg">
+									<a href="img/flower-4.jpeg" data-lightbox="post-1-img-reel">
+										<img src="img/flower-4.jpeg">
+									</a>
 								</div>
 
 							</div>	<!-- .post-slider -->
@@ -248,11 +280,22 @@
 
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script type="text/javascript" src="js/npm.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" charset="utf-8">
 	
+
+
+
+	/*----------  tooltip  ----------*/
+	
+		$(function ()	{
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+
 	/*----------  slick.js  ----------*/
 	
 
@@ -261,6 +304,7 @@
 		  slidesToScroll: 1,
 		  arrows: false,
 		  fade: true,
+		  // autoplaySpeed: ,
 		  asNavFor: '.post-slider-nav'
 		});
 		$('.post-slider-nav').slick({
@@ -274,45 +318,14 @@
 		  nextArrow: $('.next'),
 		});
 
-		// $('.portfolio-item-slider').on('init', function(event, slick, currentSlide){
-		//   var nrCurrentSlide = slick.currentSlide + 1, // din cauza ca e array si incepe de la 0
-		//       totalSlidesPerPage = nrCurrentSlide + 3; // daca ai 5 thumb-uri pe pagina pui + 4
-		//   $('.controls').html(nrCurrentSlide + " - " + totalSlidesPerPage + " of " + slick.slideCount);
-		// });
 
-		// $('.portfolio-thumb-slider').slick({
-		//   slidesToShow: 4,
-		//   slidesToScroll: 1,
-		//   asNavFor: '.portfolio-item-slider',
-		//   dots: false,
-		//   arrows: false,
-		//   focusOnSelect: true,
-		//   infinite: false
-		// });
+	/*----------  Lightbox  ----------*/
+	
 
-		// $('.portfolio-item-slider').slick({
-		//   slidesToShow: 1,
-		//   slidesToScroll: 1,
-		//   arrows: false,
-		//   asNavFor: '.portfolio-thumb-slider',
-		//   infinite: false
-		// });
-
-		// var current = 0; // current slider dupa refresh
-		// $('.portfolio-thumb-slider .slick-slide:not(.slick-cloned)').eq(current).addClass('slick-current');
-		// $('.portfolio-item-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-		//   current = currentSlide;
-		//   $('.portfolio-thumb-slider .slick-slide').removeClass('slick-current');
-		//   $('.portfolio-thumb-slider .slick-slide:not(.slick-cloned)').eq(current).addClass('slick-current');
-		//   var nrCurrentSlide = slick.currentSlide + 1, // din cauza ca e array si incepe de la 0
-		//       totalSlidesPerPage = nrCurrentSlide + 3; // daca ai 5 thumb-uri pe pagina pui + 4
-
-		//   if(totalSlidesPerPage > slick.slideCount) {
-		//     $('.controls').html(nrCurrentSlide + " - " + slick.slideCount + " of " + slick.slideCount);
-		//   } else {
-		//     $('.controls').html(nrCurrentSlide + " - " + totalSlidesPerPage + " of " + slick.slideCount);
-		//   }
-		// });
+		lightbox.option({
+			'wrapAround': true,
+			'resizeDuration': 300
+		})
 
 
 </script>
