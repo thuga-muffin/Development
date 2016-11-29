@@ -91,6 +91,10 @@ button h3	{
 
 main	{
 	background-color: #eee;
+
+	&.stuck	{
+		margin-top: 150px;
+	}
 }
 
 	section	{
@@ -166,6 +170,8 @@ main	{
 	
 nav#main-nav	{
 	padding: 0;
+
+	z-index: 9000;
 
 		.row	{
 			margin: 0;
@@ -257,8 +263,10 @@ nav#main-nav	{
 				background-color: transparent;
 				color: initial;
 			}
-		}
-	}
+		}	/* li */
+		
+	}	/* ul.nav */
+	
 
 	&.stuck	{
 		background: #fff;
@@ -269,7 +277,19 @@ nav#main-nav	{
 
 		position: fixed;
 		top: 0;
-	}
+
+		// ul.nav	{
+		// 	li	{
+		// 		a	{
+		// 			text-align: center;
+		// 		}
+		// 			a:hover:after	{
+		// 				margin: 0 10%;
+		// 			}
+		// 	}
+		// }
+	}	/* &.stuck */
+	
 }
 
 

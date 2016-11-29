@@ -9,9 +9,12 @@
 			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)	{
 				mainNav.stop(true, true).addClass("stuck", 5000);
 				console.log("I moved!")
+
+				$('main').addClass("stuck");
 			}
 			else	{
 				mainNav.stop(true, true).removeClass("stuck", 5000);
+				$('main').removeClass("stuck")
 			}
 		}
 // var mainNav = $("#main-nav");

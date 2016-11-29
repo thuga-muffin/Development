@@ -897,6 +897,9 @@ button h3 {
 main {
   background-color: #eee;
 }
+main.stuck {
+  margin-top: 150px;
+}
 section {
   background-color: #fff;
 }
@@ -953,6 +956,9 @@ footer {
 /************************************/
 nav#main-nav {
   padding: 0;
+  z-index: 9000;
+  /* ul.nav */
+  /* &.stuck */
 }
 nav#main-nav .row {
   margin: 0;
@@ -979,6 +985,7 @@ nav#main-nav ul.nav {
   border-right: none;
   border-bottom: none;
   margin: 0 0 5px;
+  /* li */
 }
 nav#main-nav ul.nav li {
   font-family: 'Source Sans Pro', sans-serif;
