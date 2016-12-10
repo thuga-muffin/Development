@@ -2,17 +2,17 @@ def gold_room
   puts "This room is full of gold. How much do you take?"
 
   print "> "
-  choice = $stdin.gets.chomp
+ choice = choice.scan /\w/
 
-  if choice.include?("0") || choice.include?("1")
-    how_much = choice.to_i
+  if choice.all? { |num| ("0".upto("9")).include?(num) }
+    how_much = choice.join.to_i
   else
     dead("Man, learn how to type a number.")
   end
 
   if how_much < 50
     puts "Nice, you're not greedy, you win!"
-    exit(0)
+    # exit(0)
   else
     dead("You greedy bastard!")
   end
