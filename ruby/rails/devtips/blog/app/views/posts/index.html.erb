@@ -1,0 +1,11 @@
+<!-- <h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p> -->
+
+<!-- <% %> runs ruby code inside of files -->
+<!-- <%= %> prints the results -->
+<% @post.each do |post| %>
+	<h2><%= post.title %></h2>
+	<div><%= truncate(post.body, :length => 250) %></div>
+	<br>
+	<%= link_to "Read Post", post %>
+<% end %>
